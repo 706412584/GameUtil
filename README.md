@@ -1,6 +1,13 @@
 # 游戏存档工具 (GameUtil)
 
+[![](https://jitpack.io/v/706412584/GameUtil.svg)](https://jitpack.io/#706412584/GameUtil)
+[![License](https://img.shields.io/badge/license-学习研究-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://developer.android.com)
+[![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg)](https://android-arsenal.com/api?level=23)
+
 一个功能强大、高性能的Android游戏存档管理SDK，支持JSON导入/导出、自动分表、异步操作、性能监控等特性。
+
+> 🎉 **现已发布到 JitPack！** 支持远程依赖导入，无需下载源码即可使用。
 
 ## 主要特性
 
@@ -28,11 +35,44 @@
 
 ### 1. 添加依赖
 
-在 `build.gradle` 中添加：
+#### 方式一：使用 JitPack 远程依赖（推荐）
+
+[![](https://jitpack.io/v/706412584/GameUtil.svg)](https://jitpack.io/#706412584/GameUtil)
+
+**步骤1：** 在项目的 `settings.gradle` 中添加 JitPack 仓库：
+
+```gradle
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }  // 添加 JitPack 仓库
+    }
+}
+```
+
+**步骤2：** 在 `app/build.gradle` 中添加依赖：
+
+```gradle
+dependencies {
+    // 存档管理库
+    implementation 'com.github.706412584.GameUtil:savelibrary:v2.1.2'
+    
+    // 反作弊库
+    implementation 'com.github.706412584.GameUtil:anticheat:v2.1.2'
+}
+```
+
+> ⚠️ **注意**：模块名必须小写（`savelibrary` 和 `anticheat`）
+
+#### 方式二：本地项目依赖
+
+如果您克隆了本项目，可以直接依赖本地模块：
 
 ```gradle
 dependencies {
     implementation project(':Savelibrary')
+    implementation project(':AntiCheat')
 }
 ```
 
@@ -397,6 +437,35 @@ int score = detector.getSecurityScore();
 - ✅ AES加密
 - ✅ 反作弊系统
 - ✅ 主表分表支持
+
+---
+
+## 🚀 发布说明
+
+### JitPack 仓库
+
+本项目已发布到 JitPack，可以通过远程依赖方式使用：
+
+- **仓库主页**: https://jitpack.io/#706412584/GameUtil
+- **最新版本**: `v2.1.2`
+
+### 依赖引用
+
+```gradle
+// 存档管理库（包含所有存档管理功能）
+implementation 'com.github.706412584.GameUtil:savelibrary:v2.1.2'
+
+// 反作弊库（包含所有安全检测功能）
+implementation 'com.github.706412584.GameUtil:anticheat:v2.1.2'
+```
+
+### 版本选择
+
+| 版本 | 说明 |
+|------|------|
+| `v2.1.2` | 最新稳定版（推荐） |
+| `latest.release` | 始终指向最新发布版本 |
+| `master-SNAPSHOT` | 最新开发版本（不推荐生产环境） |
 
 ---
 

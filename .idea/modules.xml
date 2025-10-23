@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/游戏工具.iml" filepath="$PROJECT_DIR$/.idea/modules/游戏工具.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.iml" filepath="$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AntiCheat/游戏工具.AntiCheat.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Savelibrary/游戏工具.Savelibrary.unitTest.iml" />
+    </modules>
+  </component>
+</project>
