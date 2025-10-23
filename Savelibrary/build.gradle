@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -35,4 +36,17 @@ android {
 dependencies {
     // 仅保留测试依赖，移除不必要的UI库
     testImplementation 'junit:junit:4.13.2'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.706412584'
+                artifactId = 'savelibrary'
+                version = '1.0.0'
+            }
+        }
+    }
 }
