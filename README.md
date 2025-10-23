@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://developer.android.com)
 [![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg)](https://android-arsenal.com/api?level=23)
 
-一个功能强大、高性能的Android游戏存档管理SDK，支持JSON导入/导出、自动分表、异步操作、性能监控等特性。
+一个基于Json架构开发、功能强大、高性能的Android游戏存档管理SDK，支持JSON导入/导出、自动分表、异步操作、性能监控等特性。
 
 > 🎉 **现已发布到 JitPack！** 支持远程依赖导入，无需下载源码即可使用。
 
