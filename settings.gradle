@@ -20,6 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "游戏工具"
-include ':app'
 include ':Savelibrary'
 include ':AntiCheat'

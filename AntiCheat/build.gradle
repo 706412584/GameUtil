@@ -29,6 +29,13 @@ android {
         abortOnError false
         checkReleaseBuilds false
     }
+    
+    // 配置发布variant（Android Gradle Plugin 7.1+）
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -42,6 +49,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
+                
                 groupId = 'com.github.706412584'
                 artifactId = 'anticheat'
                 version = '1.0.0'

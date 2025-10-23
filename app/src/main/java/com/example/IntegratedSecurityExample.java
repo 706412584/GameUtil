@@ -241,9 +241,9 @@ public class IntegratedSecurityExample extends Activity {
      */
     private void applySaveData(SaveData saveData) {
         // 从存档中读取数据
-        String playerName = saveData.get("player_name", "玩家");
-        int level = saveData.get("level", 1);
-        int gold = saveData.get("gold", 0);
+        String playerName = saveData.getString("player_name", "玩家");
+        int level = saveData.getInt("level", 1);
+        int gold = saveData.getInt("gold", 0);
         
         Log.i(TAG, String.format(
             "玩家: %s, 等级: %d, 金币: %d", 
@@ -297,7 +297,10 @@ public class IntegratedSecurityExample extends Activity {
         new Thread(() -> {
             Log.d(TAG, "执行后台安全检测");
             
-            SecurityDetector detector = new SecurityDetector(this, 
+            // 使用数组包装以便在回调中访问
+            final SecurityDetector[] detectorWrapper = new SecurityDetector[1];
+            
+            detectorWrapper[0] = new SecurityDetector(this, 
                 new SecurityDetector.SecurityCallback() {
                 
                 @Override
@@ -312,7 +315,7 @@ public class IntegratedSecurityExample extends Activity {
                 @Override
                 public void onDetectionComplete(boolean passed, 
                                                List<SecurityDetector.DetectionResult> threats) {
-                    int score = detector.getSecurityScore();
+                    int score = detectorWrapper[0].getSecurityScore();
                     Log.d(TAG, "后台检测完成，分数: " + score);
                     
                     if (score < 40) {
@@ -324,7 +327,7 @@ public class IntegratedSecurityExample extends Activity {
                 }
             });
             
-            detector.performSecurityCheck();
+            detectorWrapper[0].performSecurityCheck();
         }).start();
     }
     

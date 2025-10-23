@@ -39,6 +39,9 @@ dependencies {
     // 游戏存档库
     implementation project(':Savelibrary')
     
+    // 反作弊库
+    implementation project(':AntiCheat')
+    
     // Android UI库
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.13.0'
