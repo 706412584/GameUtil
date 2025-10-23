@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'game.core'
+    compileSdk 36
+
+    defaultConfig {
+        minSdk 23
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    
+    // 禁用不必要的lint检查以加快编译速度
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    // 仅保留测试依赖，移除不必要的UI库
+    testImplementation 'junit:junit:4.13.2'
+}
