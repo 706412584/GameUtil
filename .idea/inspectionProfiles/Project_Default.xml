@@ -215,6 +215,7 @@
     <inspection_tool class="AndroidLintInvalidPermission" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AndroidLintInvalidResourceFolder" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AndroidLintInvalidSetHasFixedSize" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="AndroidLintInvalidUseOfOnBackPressed" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="AndroidLintInvalidUsesTagAttribute" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AndroidLintInvalidVectorPath" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AndroidLintInvalidWakeLockTag" enabled="true" level="ERROR" enabled_by_default="true" />
