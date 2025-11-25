@@ -234,7 +234,21 @@ public class SaveData {
         data.clear();
         timestamp = System.currentTimeMillis();
     }
-    
+    /**
+     * 获取数据部分的JSON对象，并过滤指定字段
+     * @param excludeFields 需要排除的字段集合
+     */
+    public JSONObject toDataJson(java.util.Set<String> excludeFields) throws JSONException {
+        JSONObject dataObj = new JSONObject();
+        for (Map.Entry<String, Object> entry : data.entrySet()) {
+            String key = entry.getKey();
+            if (excludeFields == null || !excludeFields.contains(key)) {
+                dataObj.put(key, entry.getValue());
+            }
+        }
+        return dataObj;
+    }
+
     /**
      * 转换为JSON对象
      */
