@@ -56,10 +56,10 @@ dependencyResolutionManagement {
 ```gradle
 dependencies {
     // 存档管理库
-    implementation 'com.github.706412584.GameUtil:savelibrary:v2.1.2'
+    implementation 'com.github.706412584.GameUtil:savelibrary:v2.1.5'
     
     // 反作弊库
-    implementation 'com.github.706412584.GameUtil:anticheat:v2.1.2'
+    implementation 'com.github.706412584.GameUtil:anticheat:v2.1.5'
 }
 ```
 
